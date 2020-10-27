@@ -1,31 +1,17 @@
 import React from 'react';
 
-const DragAndDrop = props => {
-  const handleDragEnter = e => {
-    e.preventDefault();
-    e.stopPropagation();
-  };
-  const handleDragLeave = e => {
-    e.preventDefault();
-    e.stopPropagation();
-  };
-  const handleDragOver = e => {
-    e.preventDefault();
-    e.stopPropagation();
-  };
-  const handleDrop = e => {
-    e.preventDefault();
-    e.stopPropagation();
-  };
-  return (
-    <div className={'drag-drop-zone'}
-      onDrop={e => handleDrop(e)}
-      onDragOver={e => handleDragOver(e)}
-      onDragEnter={e => handleDragEnter(e)}
-      onDragLeave={e => handleDragLeave(e)}
-    >
-      <p>THIS IS THE DESIGN PAD</p>
-    </div>
-  );
-};
-export default DragAndDrop;
+const ControlsHeader = () => {
+    return (
+        <div class="controls-container">
+            <div class="box" style={{backgroundColor: "blue"}}>BLUE</div>
+            <div class="box" style={{backgroundColor: "red"}}>RED</div>
+            <div class="box" style={{backgroundColor: "green"}}>GREEN</div>
+            <div class="box" style={{backgroundColor: "orange"}}>ORANGE</div>
+        </div> 
+    )
+
+}
+
+
+
+export default ControlsHeader;
