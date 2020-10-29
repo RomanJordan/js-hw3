@@ -1,46 +1,19 @@
-html {
-  position: relative;
-  background: white;
-  height: 200px;
-  width: 50%;
-  margin: 0 auto;
-  
-  resize: both;
-  overflow: auto;
-}
-
-.item-container {
+.pad-input-container {
   display:grid;
   grid-template-columns: 200px 200px;
   grid-row: auto auto;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  text-align: center;
-  margin: 20px auto;
 }
 
-.item {
+.designpad {
+  display: flex;
   border: 1px solid black;
-  padding:20px;
-  font-size:40px;
-  font-family:sans-serif;
-  
+  width: 100px;
+  margin: 35px;
 }
 
-.design-container {
-  display:grid;
-  grid-template-columns: 200px 200px;
-  grid-row: auto auto;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  text-align: center;
-  margin: 20px auto;
-}
-
-.design-pad {
-  border: 1px solid black;
-  padding:20px;
-  font-size:40px;
-  font-family:sans-serif;
-  
+.button {
+  margin: 10px;
+  align-items: center;
 }
