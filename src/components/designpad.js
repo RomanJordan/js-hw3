@@ -14,16 +14,18 @@ class DesignPad extends Component {
     }
 
 
-    onDragOver = (ev) => {
-        // console.log("on drag over")
+    onDragOver = (ev, name) => {
+        // console.log("on drag on:",name)
         ev.preventDefault();
     }
 
-    onDrop = (ev) => {
-        var id = ev.dataTransfer.getData("id");
-        console.log("on drop, id: "+id)
-        let element = document.getElementById('button')
-        ReactDOM.findDOMNode(element).style.backgroundColor = id
+    onDrop = (ev, name) => {
+        var colid = ev.dataTransfer.getData("id");
+        console.log("USING COLOR: "+colid)
+        console.log("on drop on: "+name)
+        let element = document.getElementById(name)
+        ReactDOM.findDOMNode(element).style.backgroundColor = colid
+        // console.log(name)
         ev.preventDefault();
     }
 
@@ -31,23 +33,19 @@ class DesignPad extends Component {
         var btns = []
         this.state.buttons.forEach ((t) => {
             btns.push(
-                <div key={t.name} 
-                    onDragStart = {(e) => this.onDragStart(e, t.name)}
-                    draggable
-                    className="draggable"
-                    style = {{backgroundColor: ''}}
-                    >
-                    {t.name}
+                <div key={t.name}
+                className="designpad"  id={t.id}
+                style={{backgroundColor: 'white'}} 
+                onDragOver={(ev)=>this.onDragOver(ev, t.name)} 
+                onDrop={(e)=>this.onDrop(e, t.name)}>
+                {t.name}
                 </div>
             );
         });
 
         return(
-            <div className="designpad"  id="button"
-            style={{backgroundColor: 'white'}} 
-            onDragOver={(ev)=>this.onDragOver(ev)} 
-            onDrop={(e)=>this.onDrop(e, "complete")}>
-                
+            <div>
+                {btns}
             </div>
             
         )

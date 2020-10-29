@@ -14,7 +14,7 @@ class PadInput extends Component {
         ]
     }
     onDragStart = (ev, id) => {
-        console.log('dragstart:',id);
+        // console.log('dragstart:',id);
         ev.dataTransfer.setData("id", id);
     }
 
