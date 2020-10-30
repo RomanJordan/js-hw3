@@ -1,9 +1,6 @@
   
 import React, { Component } from 'react';
 
-
-
-
 class PadInput extends Component {
     state = {
         colors: [
@@ -28,6 +25,7 @@ class PadInput extends Component {
                     onDragStart = {(e) => this.onDragStart(e, t.name)}
                     draggable
                     className="draggable"
+                    id="inputs"
                     style = {{backgroundColor: ''}}
                     >
                     {t.name}
@@ -37,7 +35,7 @@ class PadInput extends Component {
         
 
         return(
-            <div >
+            <div className="pad-input-container" id="input">
             {btns}
             
             </div>
