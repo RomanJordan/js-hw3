@@ -26,7 +26,7 @@ class PadInput extends Component {
                     draggable
                     className="draggable"
                     id="inputs"
-                    style = {{backgroundColor: ''}}
+                    style = {{backgroundColor: t.name}}
                     >
                     {t.name}
                 </div>

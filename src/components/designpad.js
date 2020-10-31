@@ -38,13 +38,13 @@ class DesignPad extends Component {
                 style={{backgroundColor: 'white'}} 
                 onDragOver={(ev)=>this.onDragOver(ev, t.name)} 
                 onDrop={(e)=>this.onDrop(e, t.name)}>
-                {t.name}
+                
                 </div>
             );
         });
 
         return(
-            <div>
+            <div className="ds-container">
                 {btns}
             </div>
             

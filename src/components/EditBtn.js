@@ -44,5 +44,5 @@ class EditBtn extends Component {
        )
    }
 }
-
+// A lot of this code taken from official react tutorial
 export default EditBtn
