@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { button } from 'react-bootstrap'
 
 class EditBtn extends Component {
     constructor(props) {
@@ -16,10 +17,7 @@ class EditBtn extends Component {
         let elements = document.getElementsByClassName("draggable")
         if (!this.state.isToggleOn) {
             console.log(this.state.isToggleOn+ "false")
-            // let element = document.getElementById("inputs")
-            // element.draggable = false;
 
-            
             for (var i = 0; i < elements.length; i++) {
                 elements[i].draggable = false;
                 elements[i].style.opacity = 0.5;
@@ -37,7 +35,7 @@ class EditBtn extends Component {
    render() {
        return(
            <div>
-               <button onClick={this.handleClick}>
+               <button onClick={this.handleClick} className="btn btn-primary">
                     {this.state.isToggleOn ? 'EDIT OFF' : 'EDIT ON'}
                 </button>
            </div>
